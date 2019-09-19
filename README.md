@@ -19,9 +19,9 @@ The specifications for VCF format are described [here](https://samtools.github.i
 
 Run the command lines below in the folder where you downloaded **Mutant Genome Creator** script:
 
-`chmod +x mutant_genome_creator`
+`chmod +x mutant_genome_creator.pl`
 
-`./mutant_genome_creator --vcf input.vcf --genome input_genome.fasta --gtf input.gtf --outGenome output_genome.fasta --outGTF output.gtf`
+`./mutant_genome_creator.pl --vcf input.vcf --genome input_genome.fasta --gtf input.gtf --outGenome output_genome.fasta --outGTF output.gtf`
 
 ### Options
 |Option      |Description                                                                       |
