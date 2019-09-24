@@ -1,0 +1,12 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##samtoolsVersion=1.1+htslib-1.1
+##bcftools_callVersion=1.1+htslib-1.1
+##reference=toy-data
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	C57BL_6NJ
+1	301	.	A	.]ch1:123456]	45	PASS	STRUCTURAL	GT	YES
+1	361	.	G	cgcatgcatgctagctagt	45	PASS	SNP	GT	NO
+1	421	.	G	gaca,g	30	PASS	INDEL	GT	YES
+1	481	.	GCT	A	31	PASS	INDEL	GT	YES
+2	241	.	T	cc	13	PASS	INDEL	GT	YES
+2	361	.	C	t	40	Het	SNP	GT	YES

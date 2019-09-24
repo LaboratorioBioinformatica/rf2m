@@ -1,0 +1,12 @@
+#!genome-build Toy-data
+#!genome-version Toy-data
+#!genome-date 2019-09
+#!genome-build-accession toy-data
+#!genebuild-last-updated 2019-09
+1	havana	gene	290	200	.	+	.	gene_id "gene0"; gene_version "1"; gene_name "gene0";
+1	havana	gene	400	365	.	+	.	gene_id "gene1"; gene_version "1"; gene_name "gene1";
+1	havana	transcript	400	365	.	+	.	gene_id "gene1; gene_version "1"; transcript_id "001";
+1	havana	exon	400	380	.	+	.	.	gene_id "gene1"; gene_version "1"; gene_name "gene1"; exon_number "1";
+1	ensembl	gene	410	500	.	-	.	.	gene_id "gene2"; gene_version "1"; gene_name "gene2";
+1	ensembl	exon	427	460	.	-	.	.	gene_id "gene2"; gene_version "1"; gene_name "gene2"; exon_number "1";
+2	ensembl	gene	470	210	.	-	.	.	gene_id "gene3"; gene_version "1"; gene_name "gene3";
