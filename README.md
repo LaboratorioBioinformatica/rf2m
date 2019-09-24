@@ -6,7 +6,7 @@
 
 To run **Mutant Genome Creator** you only need to have Perl (I think any versions works, but my Perl version is 5.26.1) installed on your machine. The software also does not need to be installed.
 
-##FASTA file
+## FASTA file
 
 The Mutant Genome Creator was designed to process fasta files from ENSEMBL database [link](https://www.ensembl.org/index.html).
 
