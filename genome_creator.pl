@@ -2,11 +2,10 @@
 
 use Getopt::Long;
 
-$vcf = '';
 $genome = '';
 $output_genome = '';
 
-GetOptions('vcf=s' => \$vcf, 'genome=s' => \$genome, 'outGenome=s' => \$output_genome) or die "Usage: $0 --vcf NAME --genome NAME --outGenome NAME";
+GetOptions('genome=s' => \$genome, 'outGenome=s' => \$output_genome) or die "Usage: $0 --genome NAME --outGenome NAME\n";
 
 $time = localtime;
 
@@ -33,7 +32,7 @@ while ($genome_line = <GENOME>) {
     undef @sequence;
     @seq_per_base = split("",$complete_sequence);
     undef $complete_sequence;
-    open(VCF, "$vcf") or die "Cannot open file $vcf. This file does not exist!\n";
+    open(VCF, "mutations_accepted.vcf") or die "Cannot open mutation_accepted.vcf. This file does not exist. Run format_vcf.pl first!\n";
     $/ = "\n";
     while ($vcf_line = <VCF>) {
 	chomp($vcf_line);
@@ -43,18 +42,9 @@ while ($genome_line = <GENOME>) {
 	@vcf_tab = split("\t",$vcf_line);
 	$chr = $vcf_tab[0];
 	$pos = $vcf_tab[1] - 1;
-	$ref = $vcf_tab[3];	    
+	$ref = uc $vcf_tab[3];	    
 	$alt = uc $vcf_tab[4];
 	$filter = $vcf_tab[6];
-	if ($filter ne "PASS") {
-	    next;
-	}
-	if ($alt =~ m/\,/) {
-	    next;
-	}
-	if (not $alt =~ m/\A([ACGT]+|\.)\z/i) {
-	    next;
-	}
 	if ($chr eq $chr_ref) {
 	    if (length($ref) > 1) {
 		@chg = split("", $ref);
