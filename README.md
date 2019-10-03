@@ -8,7 +8,7 @@ To run **rf2m** you only need to have Perl (I think any versions works, but my P
 
 ## FASTA file
 
-The rf2m was designed to process fasta files from ENSEMBL database [link](https://www.ensembl.org/index.html).
+The rf2m was designed to process fasta files from [ENSEMBL database](https://www.ensembl.org/index.html).
 
 ## VCF file format
 
