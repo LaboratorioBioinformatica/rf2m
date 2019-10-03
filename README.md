@@ -1,18 +1,18 @@
-# Mutant Genome Creator
+# rf2m
 
-**Mutant Genome Creator** is a software developed to modify genomes based on VCF files with SNPs and indels present in cell lines or strains. The software also creates a new annotation file (GTF) for the mutant genome with updated coordinates of the genes.
+**rf2m** is a software developed to modify genomes based on VCF files with SNPs and indels present in cell lines or strains. The software also creates a new annotation file (GTF) for the mutant genome with updated coordinates of the genes.
 
 ## Requirements
 
-To run **Mutant Genome Creator** you only need to have Perl (I think any versions works, but my Perl version is 5.26.1) installed on your machine. The software also does not need to be installed.
+To run **rf2m** you only need to have Perl (I think any versions works, but my Perl version is 5.26.1) installed on your machine. The software also does not need to be installed.
 
 ## FASTA file
 
-The Mutant Genome Creator was designed to process fasta files from ENSEMBL database [link](https://www.ensembl.org/index.html).
+The rf2m was designed to process fasta files from ENSEMBL database [link](https://www.ensembl.org/index.html).
 
 ## VCF file format
 
-The specifications for VCF format are described [here](https://samtools.github.io/hts-specs/VCFv4.2.pdf). The script does not work for structural variants, only for SNPs and small indels (there isn't a maximum number of nucleotides in a INDEL supported by our tool. The software will process as many nucleotides as the REF/ALT field have. However, REF/ALT field must have only letters (A,C,G,T,a,c,g,t)). In the present version of **Mutant Genome Creator** only the SNPs and indels with **PASS** in the FILTER field will be processed. We are studying to include an option where the user can choose the Filter value in future releases. If the nucleotides in REF column in VCF file does not match with the nucleotides in the same positions on genome, the script will skip this mutation. When there are overlapping indels only the first will be processed. The script also does not process the lines in VCF with more than one alternative allele in ALT field. Below has an example: The first line will be processed, and the second will not be processed.
+The specifications for VCF format are described [here](https://samtools.github.io/hts-specs/VCFv4.2.pdf). The script does not work for structural variants, only for SNPs and small indels (there isn't a maximum number of nucleotides in a INDEL supported by our tool. The software will process as many nucleotides as the REF/ALT field have. However, REF/ALT field must have only letters (A,C,G,T,a,c,g,t)). In the present version of **rf2m** only the SNPs and indels with **PASS** in the FILTER field will be processed. We are studying to include an option where the user can choose the Filter value in future releases. If the nucleotides in REF column in VCF file does not match with the nucleotides in the same positions on genome, the script will skip this mutation. When there are overlapping indels only the first will be processed. The script also does not process the lines in VCF with more than one alternative allele in ALT field. Below has an example: The first line will be processed, and the second will not be processed.
 
 |CHROM | POS | ID | REF | ALT | QUAL | FILTER | INFO |
 |------|-----|----|-----|-----|------|--------|------|
@@ -21,7 +21,7 @@ The specifications for VCF format are described [here](https://samtools.github.i
 
 ## Running
 
-Run the command lines below in the folder where you downloaded **Mutant Genome Creator**:
+Run the command lines below in the folder where you downloaded **rf2m**:
 
 `chmod +x format_vcf.pl`
 
